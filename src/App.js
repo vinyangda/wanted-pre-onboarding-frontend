@@ -1,11 +1,20 @@
-import logo from "./logo.svg";
-import "./App.css";
+import "./reset.css";
+import { Routes, Route } from "react-router-dom";
+
+import Signin from "./pages/Signin";
+import Signup from "./pages/Signup";
+import TodoList from "./pages/TodoList";
 
 function App() {
   return (
-    <div>
-      <header></header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Signup />} />
+        <Route path="signup" element={<Signup />} />
+        <Route path="signin" element={<Signin />} />
+        <Route path="todo" element={<TodoList />} />
+      </Routes>
+    </>
   );
 }
 
